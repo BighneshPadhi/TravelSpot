@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #023047; /* Dark Blue */
+    background-color: #f4f4f4; /* Light Background */
+}
+
+header {
+    background-color: #219ebc; /* Light Blue */
+    color: white;
+    padding: 15px 20px;
+    position: static;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+header .logo {
+    font-size: 28px; /* Slightly larger font */
+    font-weight: bold;
+    letter-spacing: 1px; /* Spacing for modern look */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Add transform for hover effect */
+}
+
+nav ul li a:hover {
+    color: #ffb703; /* Yellow */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.hero {
+    background-image: url('images/hero-image.jpg'); /* Hero image */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    margin-top: 60px; /* To avoid overlap with fixed header */
+    position: relative;
+    filter: brightness(0.8); /* Darken the hero image slightly */
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ffb703; /* Yellow */
+    color: #023047; /* Dark Blue */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced button shadow */
+}
+
+.cta-button:hover {
+    background-color: #fb8500; /* Orange */
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.content-section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #219ebc; /* Light Blue */
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.destination {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destination img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #ffb703; /* Border at the bottom of the image */
+}
+
+.destination h3 {
+    margin: 10px 0;
+    font-size: 22px; /* Slightly larger font size */
+    text-align: center;
+    color: #023047; /* Dark Blue */
+}
+
+.destination p {
+    padding: 0 10px;
+    text-align: center;
+    color: #666; /* Gray for description */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #023047; /* Dark color from your palette */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff; /* White text color */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+}
+
+footer a {
+    color: #8ecae6; /* Light blue from your palette */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and scale */
+}
+
+footer a:hover {
+    color: #ffb703; /* Accent color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+footer a:active {
+    color: #fb8500; /* Slightly darker color when clicked */
+}
+
+footer a:focus {
+    outline: none;
+    border-bottom: 2px solid #ffb703; /* Underline on focus */
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-box {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+.search-box:focus {
+    border-color: #219ebc; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.search-button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+}
+
+.search-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Highlighted text */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items */
+        margin: 10px 0; /* Vertical margin */
+    }
+
+    .hero {
+        padding: 80px 20px; /* Reduce padding */
+    }
+
+    .hero h1 {
+        font-size: 36px; /* Smaller font size for h1 */
+    }
+
+    .hero p {
+        font-size: 20px; /* Smaller font size for p */
+    }
+
+    .cta-button {
+        font-size: 16px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        width: 90%; /* Full width for search box */
+    }
+
+    .content-section {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .content-section h2 {
+        font-size: 28px; /* Smaller font size for h2 */
+    }
+
+    .destinations-grid {
+        padding: 0; /* Remove padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+
+    .hero p {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .search-box {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .destination h3 {
+        font-size: 20px; /* Smaller font size for destination title */
+    }
+
+    .destination p {
+        font-size: 14px; /* Smaller font size for description */
+    }
+}
